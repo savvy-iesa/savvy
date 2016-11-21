@@ -1,0 +1,25 @@
+{
+  "name": "savvy",
+  "version": "1.0.0",
+  "description": "savvy-agency-project-smartphone-addict",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/savvy-iesa/savvy.git"
+  },
+  "author": "edouard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/savvy-iesa/savvy/issues"
+  },
+  "homepage": "https://github.com/savvy-iesa/savvy#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.2",
+    "gulp": "^3.9.1",
+    "gulp-ruby-sass": "^2.1.1",
+    "gulp-sass": "^2.3.2"
+  }
+}
