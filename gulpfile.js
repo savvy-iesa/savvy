@@ -9,7 +9,6 @@ gulp.task('serve', ['sass'], function() {
         server: "./",
         port: 15000
     });
-
     gulp.watch("savvy/scss/*.scss", ['sass']);
     gulp.watch("savvy/*.html").on('change', browserSync.reload);
 });
