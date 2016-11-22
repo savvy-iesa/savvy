@@ -9,14 +9,14 @@ gulp.task('serve', ['sass'], function() {
         server: "./",
         port: 15000
     });
-    gulp.watch("savvy/scss/*.scss", ['sass']);
-    gulp.watch("savvy/*.html").on('change', browserSync.reload);
+    gulp.watch("scss/*.scss", ['sass']);
+    gulp.watch("*.html").on('change', browserSync.reload);
 });
 
 gulp.task('sass', function() {
-    return gulp.src("savvy/sass/*.scss")
+    return gulp.src("sass/*.scss")
         .pipe(sass())
-        .pipe(gulp.dest("app/css"))
+        .pipe(gulp.dest("css"))
         .pipe(browserSync.stream());
 });
 
