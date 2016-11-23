@@ -1,0 +1,22 @@
+@mixin sp-border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin sp-flex-box($direction,$horizontal-alignement,$vertical-alignement){
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $horizontal-alignement;
+  align-items: $vertical-alignement;
+}
+
+@mixin sp-block-bg-picto($direction,$height,$width,$url){
+  display: $direction;
+  height:$height;
+  width:$width;
+  background: ($url)no-repeat center center;
+  overflow: hidden;
+  text-indent: 9999px;
+}
