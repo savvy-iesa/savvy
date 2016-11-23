@@ -1,23 +1,20 @@
 'use strict';
 var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
-var sass        = require('gulp-sass');
+var sass        = require('gulp-ruby-sass');
 
-gulp.task('serve', ['sass'], function() {
+gulp.task('css', function()
+{
+    return sass('sass/*', {style : "expanded"})
+        .pipe(gulp.dest('css/'))
+        .pipe(browserSync.stream());
+});
 
+gulp.task('watch', function() {
     browserSync.init({
         server: "./",
         port: 15000
     });
-    gulp.watch("scss/*.scss", ['sass']);
+    gulp.watch("sass/*", ['css']);
     gulp.watch("*.html").on('change', browserSync.reload);
 });
-
-gulp.task('sass', function() {
-    return gulp.src("sass/*.scss")
-        .pipe(sass())
-        .pipe(gulp.dest("css"))
-        .pipe(browserSync.stream());
-});
-
-gulp.task('default', ['serve']);
