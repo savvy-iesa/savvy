@@ -44,7 +44,6 @@ $(function () {
         $("#appform .demo-form").submit(function(e){
 
             e.preventDefault();
-            console.log("click");
 
             $actionForm = $(this).attr('action');
             var donnees = $(this).serialize();
