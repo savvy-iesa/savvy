@@ -19,3 +19,6 @@ include("header.php");
 <div class="dashboard">
     <p>Content Dashboard</p>
 </div>
+
+
+<?php include("footer.php") ?>
