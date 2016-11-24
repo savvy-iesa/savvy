@@ -7,7 +7,7 @@
  * Time: 23:10
  */
 
-require("Database.php");
+require(__DIR__."/Database.php");
 
 class IAClass
 {

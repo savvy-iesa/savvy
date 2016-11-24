@@ -6,7 +6,7 @@
  * Date: 24/11/2016
  * Time: 10:46
  */
-require("Database.php");
+require(__DIR__."/Database.php");
 
 class Form
 {

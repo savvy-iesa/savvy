@@ -6,8 +6,8 @@
  * Time: 10:47
  */
 
-require('../classes/Form.php');
-require('../classes/IAClass.php');
+require(__DIR__."/classes/Form.php");
+require(__DIR__."/classes/IAClass.php");
 
 if(isset($_POST) && !empty($POST)) {
     $resultsForm = $_POST;

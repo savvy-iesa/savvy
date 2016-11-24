@@ -7,7 +7,7 @@
  * Time: 11:54
  */
 
-require("../config.php");
+require(dirname(__DIR__)."/config.php");
 
 class Database
 {
