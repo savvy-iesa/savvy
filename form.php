@@ -17,7 +17,7 @@ $listCategories = $form->listCategories();
 <div id="appform">
     <h1>Configurer votre enfant</h1>
 
-    <form class="demo-form">
+    <form class="demo-form" method="post" action="controllers/FormController.php">
 
     <?php foreach($listCategories as $listCategory){
         $id_cat = $listCategory['id'];
