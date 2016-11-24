@@ -17,15 +17,14 @@ $listCategories = $form->listCategories();
 <div id="appform">
     <h1>Configurer votre enfant</h1>
 
-    <?php
+    <form class="demo-form">
 
-    foreach($listCategories as $listCategory){
-
+    <?php foreach($listCategories as $listCategory){
         $id_cat = $listCategory['id'];
         $listSubcategories = $form->listSubcategories($id_cat);
     ?>
 
-        <section>
+        <div class="form-section">
             <h2><?= $listCategory['name'] ?></h2>
 
             <?php
@@ -33,12 +32,21 @@ $listCategories = $form->listCategories();
                     $id_sub = $listSubcategory['id'];
                     ?>
 
-                    <input type="checkbox" name="item[<?= $id_cat ?>][<?= $id_sub ?>]" value="1">
-                    <span><?= $listSubcategory['name'] ?></span>
+                    <input type="checkbox" class="form-control" name="item[<?= $id_cat ?>][<?= $id_sub ?>]" value="1">
+                    <label for="<?= $listSubcategory['name'] ?>"><?= $listSubcategory['name'] ?></label>
                 <?php } ?>
-        </section>
+        </div>
 
     <?php } ?>
+
+        <div class="form-navigation">
+            <button type="button" class="previous btn btn-info pull-left">&lt; Previous</button>
+            <button type="button" class="next btn btn-info pull-right">Next &gt;</button>
+            <input type="submit" class="btn btn-default pull-right">
+            <span class="clearfix"></span>
+        </div>
+
+    </form>
 </div>
 
 
