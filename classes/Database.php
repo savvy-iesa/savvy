@@ -7,7 +7,7 @@
  * Time: 11:54
  */
 
-require("./config.php");
+require("../config.php");
 
 class Database
 {
