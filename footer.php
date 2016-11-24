@@ -10,6 +10,11 @@
         <footer>
             <p>Le content du footer</p>
         </footer>
+
+        <!-- scripts insertion -->
+        <script src="js/jquery.js"></script>
+        <script src="js/parsley.min.js"></script>
+
     </body>
 </html>
 
