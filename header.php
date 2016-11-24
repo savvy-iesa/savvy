@@ -6,5 +6,4 @@
  * Time: 21:37
  */
 
-require("database.php");
 
