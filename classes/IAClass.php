@@ -7,8 +7,6 @@
  * Time: 23:10
  */
 
-require(__DIR__."/Database.php");
-
 class IAClass
 {
     var $data = null;
