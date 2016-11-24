@@ -10,6 +10,12 @@ $pagetitle = "Smartphamily - Dashboard";
 include("header.php");
 
 ?>
+
+<!-- Formulaire lightbox -->
+<div class="hidden form">
+    <?php include("form.php") ?>
+</div>
+
 <div class="dashboard">
     <p>Content Dashboard</p>
 </div>
