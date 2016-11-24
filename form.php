@@ -6,7 +6,6 @@
  * Time: 20:44
  */
 
-include("header.php");
 include("classes/Form.php");
 
 $form = new Form;
