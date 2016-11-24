@@ -18,8 +18,34 @@ class Form
 
     public function listCategories(){
         $bdd = $this->database;
-        $bdd->prepare('SELECT id FROM entry');
+        $req = $bdd->prepare('SELECT * FROM category');
+        $req->execute();
 
+        $array = array();
+
+        while($data = $req->fetch()){
+            $array[] = $data;
+        }
+
+        return $array;
 
     }
+
+    public function listSubcategories($idsubcategory){
+        $bdd = $this->database;
+        $req = $bdd->prepare('SELECT * FROM sub_category WHERE id_category = :idcat');
+        $req->execute(array('idcat' => $idsubcategory));
+
+        $array = array();
+
+        while($data = $req->fetch()){
+            $array[] = $data;
+        }
+
+        return $array;
+
+    }
+
+
+
 }

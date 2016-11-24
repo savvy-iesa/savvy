@@ -9,13 +9,34 @@
 include("classes/Form.php");
 
 $form = new Form;
-$form->listCategories();
+$listCategories = $form->listCategories();
 
 ?>
 
-<div>
-    <p>Test</p>
+<h1>Configurer votre enfant</h1>
 
-</div>
+<?php
+
+foreach($listCategories as $listCategory){
+
+    $id_cat = $listCategory['id'];
+    $listSubcategories = $form->listSubcategories($id_cat);
+?>
+
+    <section>
+        <h2><?= $listCategory['name'] ?></h2>
+
+        <?php
+            foreach($listSubcategories as $listSubcategory){
+                $id_sub = $listSubcategory['id'];
+                ?>
+
+                <input type="checkbox" name="item[<?= $id_cat ?>][<?= $id_sub ?>]" value="1">
+                <span><?= $listSubcategory['name'] ?></span>
+            <?php } ?>
+    </section>
+
+<?php } ?>
+
 
 
