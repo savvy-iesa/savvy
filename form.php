@@ -7,3 +7,16 @@
  */
 
 include("header.php");
+include("classes/Form.php");
+
+$form = new Form;
+$form->listCategories();
+
+?>
+
+<div>
+    <p>Test</p>
+
+</div>
+
+

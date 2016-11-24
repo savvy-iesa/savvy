@@ -11,7 +11,6 @@
 // Local
 define("DBHOST", "localhost");
 define("DBNAME", "savvy");
-define("DBPORT", "8889");
 define("DBUSER", "root");
 define("DBPASSWD", "root");
 

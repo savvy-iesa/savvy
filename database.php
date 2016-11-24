@@ -11,7 +11,6 @@ require("config.php");
 
 try {
     $bdd = new PDO('mysql:host='.DBHOST.';
-        port='.DBPORT.';
         dbname='.DBNAME .';
         charset=utf8', DBUSER, DBPASSWD);
 }
