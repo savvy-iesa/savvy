@@ -39,6 +39,11 @@ $listCategories = $form->listCategories();
 
     <?php } ?>
 
+        <div class="form-section">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" name="email" required="">
+        </div>
+
         <div class="form-navigation">
             <button type="button" class="previous btn btn-info pull-left">&lt; Previous</button>
             <button type="button" class="next btn btn-info pull-right">Next &gt;</button>
