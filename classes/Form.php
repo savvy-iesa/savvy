@@ -46,6 +46,12 @@ class Form
 
     }
 
+    public function addEntry($email, $ip, $img_key, $date){
+        $bdd = $this->database;
+        $req = $bdd->prepare('INSERT INTO entry (email, ip, img_key, date) VALUES (:email, :ip, :img_key, :date)');
+        $req->execute(array('email' => $email, 'ip' => $ip, 'img_key' => $img_key, 'date' => $date));
 
+        return true;
+    }
 
 }
