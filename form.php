@@ -8,7 +8,7 @@
 
 include("classes/Form.php");
 
-// Include this file in AJAX, no header.php required
+// Include this file in dashboard.php
 
 $form = new Form;
 $listCategories = $form->listCategories();
