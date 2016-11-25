@@ -96,6 +96,8 @@ $(function () {
                 function (data) {
                     var errors = data['errors'];
                     showErrors(errors);
+
+                    $('.form-section').hide();
                 }
             );
         });
