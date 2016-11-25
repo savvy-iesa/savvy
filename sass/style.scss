@@ -300,7 +300,7 @@ body,html{
     width:60px;
     overflow: hidden;
     font-size:0;
-    background: url("../assets/images");
+    background: url("../assets/images/icon_send.png")no-repeat center center;
     position: relative;
     &:after{
      display: block;
@@ -321,14 +321,18 @@ body,html{
     position: relative;
    }
    input[type="submit"]{
-    background: white;
+    background: $sp-white;
     height: 60px;
     border:none;
-    border-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     width:60px;
     overflow: hidden;
     font-size: 0;
     outline-style: none;
+    background-image: url("../assets/images/icon_fleche.png");
+    background-repeat: no-repeat;
+    background-position:center center ;
    }
   }
  }
