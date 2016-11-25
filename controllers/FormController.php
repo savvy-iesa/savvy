@@ -71,7 +71,10 @@ function checkFields($postdata)
             $errors['email'] = 'champ email trop long (150max)';
             // si format mail invalide
         } else if (!filter_var($postdata['email'], FILTER_VALIDATE_EMAIL)) {
-            $errors['email'] = 'champ email non-valide';
+            $errors['email'] = 'J\'ai besoin d\'un email valide';
+        }
+        else{
+            $errors['email']='Parfait, il n\'y a plus qu\'à valider';
         }
     }
 

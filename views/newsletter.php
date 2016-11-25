@@ -33,9 +33,8 @@ if (isset($_SESSION['errors'])) {
     <div class="form-section">
         <div class="feedback"></div>
         <label for="email">Email:</label>
-        <input type="email" id="email" class="form-control email" name="email" required="">
+        <input type="email" id="email" class="form-control email" name="email" required="" placeholder="Rentrez votre email ici">
         <input type="submit" class="button-click click-off" name="submit" value="subscribe">
-        <div class="errors"></div>
     </div>
 </form>
 

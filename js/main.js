@@ -45,33 +45,8 @@ $(function () {
 
         // errors display function
         function showErrors(errors, inputName, showAsPopover) {
-            var targetElt = $('#' + inputName);
-            targetElt.closest('.form-section').find('.feedback').remove();
-            if (!!errors[inputName]) {
-                targetElt.closest('.form-section')
-                    .removeClass('has-success')
-                    .addClass('has-error');
-
-                if (showAsPopover) {
-                    if (targetElt.data('bs.popover')) {
-                        targetElt.data('bs.popover').options.content = errors[inputName]
-
-                    } else {
-                        targetElt.popover({
-                            content: errors[inputName]
-                        })
-                    }
-                    targetElt.popover('show');
-                } else {
-                    targetElt
-                        .after($('<p class="text-danger">' + errors[inputName] + '</p>'));
-                }
-            } else {
-                targetElt.closest('.form-section')
-                    .removeClass('has-error')
-                    .addClass('has-success');
-
-            }
+           console.log(errors);
+            $('#info-bulle').html(''+errors.email+'');
         }
 
         $('#newsletter-form input, #newsletter-form textarea').on('focus', function (e) {
