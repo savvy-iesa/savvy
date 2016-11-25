@@ -6,7 +6,7 @@
  * Time: 20:44
  */
 
-include(__DIR__."/classes/Form.php");
+include(dirname(__DIR__)."/classes/Form.php");
 
 // Include this file in dashboard.php
 
