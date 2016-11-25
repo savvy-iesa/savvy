@@ -8,7 +8,6 @@
 
 require(dirname(__DIR__)."/classes/IAClass.php");
 
-
 // If GET action is defined
 
 $action = (isset($_GET['action']) ? $_GET['action']:'');
@@ -16,6 +15,8 @@ $action = (isset($_GET['action']) ? $_GET['action']:'');
 if($action == "save"){
     $dataspost = $_POST;
     echo "test pour l'enregistrement";
+} else {
+    header("Location: ../index.html");
 }
 
 function controlForm($resultsForm){
