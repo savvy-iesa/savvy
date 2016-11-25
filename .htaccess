@@ -1,5 +1,5 @@
 Options +FollowSymlinks
 RewriteEngine on
 
-# Règles de réécriture des views
-RewriteRule ^([^\.]+)$ /views/$1.php [nc]
+# Règles de réécriture
+RewriteRule ^(.*)\.html$ /views/$1.php [nc]
