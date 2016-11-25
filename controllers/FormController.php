@@ -6,13 +6,16 @@
  * Time: 10:47
  */
 
-require(dirname(__DIR__)."/classes/Form.php");
 require(dirname(__DIR__)."/classes/IAClass.php");
 
-if(isset($_POST) && !empty($POST)) {
-    $resultsForm = $_POST;
-} else {
-    header('Location: ../index.html');
+
+// If GET action is defined
+
+$action = (isset($_GET['action']) ? $_GET['action']:'');
+
+if($action == "save"){
+    $dataspost = $_POST;
+    echo "test pour l'enregistrement";
 }
 
 function controlForm($resultsForm){
