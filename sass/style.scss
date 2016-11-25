@@ -357,3 +357,140 @@ body,html{
  vertical-align: middle;
  background: transparent;
 }
+
+#landingPage #henry svg{
+ width:100px;
+ height:120px;
+}
+
+@media  only screen and (max-device-width:768px) {
+ #landingPage #logo{
+  width:120px;
+ }
+ #landingPage h1 {
+  margin: auto;
+  color: #fff;
+  font-size: 20px;
+  font-family: "projectReg";
+  margin-top: 30px;
+  line-height: 26px;
+  position: relative;
+  width: 300px;
+ }
+ #landingPage .henry-talking{
+  font-size: 16px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+ }
+ #landingPage #henry{
+  height:120px;
+ }
+ #landingPage #henry svg{
+  width:60px;
+  height:80px;
+  margin-left: -30px;
+ }
+ #landingPage #henry .henry-shadow{
+  width:60px;
+  margin-left: -30px;
+ }
+ #landingPage #info div {
+  position: absolute;
+  left: 56px;
+  top: 12px;
+  z-index: 100;
+ }
+
+ #landingPage #henry .bulle-henry-container {
+  position: absolute;
+  left: 50%;
+  height: 100px;
+  width: 100px;
+  margin-left: -50px;
+  top: 10px;
+ }
+ #landingPage #henry .bulle-henry-container div {
+  background: transparent;
+  height: 6px;
+  width: 6px;
+  left: 50%;
+  margin-left: -5px;
+  position: absolute;
+  top: 0;
+  z-index: 8;
+  background: #fff;
+  border-radius: 3px;
+ }
+
+ #landingPage #info {
+  font-family: projectReg;
+  box-sizing: border-box;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  width: 280px;
+  height: 35px;
+  background: #ff2f78;
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+  position: relative;
+  -webkit-box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.3);
+  margin-top: 15px;
+ }
+
+ #landingPage .newsletter-form .form-section label {
+  height: 30px;
+  width: 30px;
+  overflow: hidden;
+  font-size: 0;
+  background: url("../assets/images/icon_send.png") no-repeat center center;
+  position: relative;
+  background-size:20px 20px;
+ }
+ #landingPage .newsletter-form .form-section input[type="submit"] {
+  background: #fff;
+  height: 30px;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 30px;
+  overflow: hidden;
+  font-size: 0;
+  outline-style: none;
+  background-image: url("../assets/images/icon_fleche.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 20px 20px;
+ }
+ #landingPage .newsletter-form .form-section {
+  width: 280px;
+  background: #e8e8e8;
+  border-radius: 5px;
+  margin:auto;
+ }
+ #landingPage .newsletter-form .form-section input.email {
+  width: 202px;
+  border: none;
+  outline-style: none;
+  background: transparent;
+  position: relative;
+ }
+ #landingPage .newsletter-form {
+  width: 280px;
+ }
+ #landingPage #henry{
+  margin-bottom: 25px;
+ }
+ #landingPage #info span:before {
+  top: -10px;
+  margin-left: -10px;
+  width: 20px;
+  height: 20px;
+ }
+ body{
+  overflow: inherit;
+ }
+}

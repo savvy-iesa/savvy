@@ -38,7 +38,7 @@
 
             <div id="henry">
                 <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     viewBox="0 0 291.3 328" style="enable-background:new 0 0 291.3 328;" xml:space="preserve" width="100" height="120px">
+                     viewBox="0 0 291.3 328" style="enable-background:new 0 0 291.3 328;" xml:space="preserve">
                 <style type="text/css">
                     .st2{fill:none;stroke:#FFFFFF ;stroke-width:18;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:0.9996,0;}
                 </style>
