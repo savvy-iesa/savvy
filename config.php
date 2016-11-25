@@ -12,7 +12,7 @@
 define("DBHOST", "localhost");
 define("DBNAME", "savvy");
 define("DBUSER", "root");
-define("DBPASSWD", "root");
+define("DBPASSWD", "");
 
 // Server
 

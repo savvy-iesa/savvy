@@ -9,3 +9,48 @@ header{
 .hide-lightbox{
  display: none;
 }
+#landingPage{
+ text-align: center;
+ width:100%;
+ height: 100%;
+ background: rgba(255,47,120,1);
+ background: -moz-linear-gradient(45deg, rgba(255,47,120,1) 0%, rgba(227,47,209,1) 100%);
+ background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(255,47,120,1)), color-stop(100%, rgba(227,47,209,1)));
+ background: -webkit-linear-gradient(45deg, rgba(255,47,120,1) 0%, rgba(227,47,209,1) 100%);
+ background: -o-linear-gradient(45deg, rgba(255,47,120,1) 0%, rgba(227,47,209,1) 100%);
+ background: -ms-linear-gradient(45deg, rgba(255,47,120,1) 0%, rgba(227,47,209,1) 100%);
+ background: linear-gradient(45deg, rgba(255,47,120,1) 0%, rgba(227,47,209,1) 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2f78', endColorstr='#e32fd1', GradientType=1 );
+ #logo{
+  width:400px;
+  height:auto;
+  &:after{
+   display: block;
+   height:2px;
+   width:350px;
+   position: absolute;
+   bottom:-75px;
+   left: 175px;
+   background: $sp-white;
+  }
+ }
+}
+
+.vertical-align-wrap {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ display: table;
+ background: transparent;
+}
+
+.vertical-align {
+ background: white;
+ display: table-cell;
+ background:transparent;
+}
+
+.vertical-align--middle {
+ vertical-align: middle;
+ background: transparent;
+}

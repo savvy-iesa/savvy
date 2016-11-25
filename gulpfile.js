@@ -13,7 +13,8 @@ gulp.task('css', function()
 
 gulp.task('watch', function() {
     connect.server({
-        livereload:true
+        livereload:true,
+        port:8080
     })
     gulp.watch("sass/*", ['css']);
     gulp.watch("*.html").on('change', browserSync.reload);

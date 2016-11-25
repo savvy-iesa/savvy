@@ -62,3 +62,49 @@ header {
 .hide-lightbox {
   display: none;
 }
+
+#landingPage {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background: #ff2f78;
+  background: -moz-linear-gradient(45deg, #ff2f78 0%, #e32fd1 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, #ff2f78), color-stop(100%, #e32fd1));
+  background: -webkit-linear-gradient(45deg, #ff2f78 0%, #e32fd1 100%);
+  background: -o-linear-gradient(45deg, #ff2f78 0%, #e32fd1 100%);
+  background: -ms-linear-gradient(45deg, #ff2f78 0%, #e32fd1 100%);
+  background: linear-gradient(45deg, #ff2f78 0%, #e32fd1 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2f78', endColorstr='#e32fd1', GradientType=1 );
+}
+#landingPage #logo {
+  width: 400px;
+  height: auto;
+}
+#landingPage #logo:after {
+  display: block;
+  height: 2px;
+  width: 350px;
+  position: absolute;
+  bottom: -75px;
+  left: 175px;
+  background: #fff;
+}
+
+.vertical-align-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: table;
+  background: transparent;
+}
+
+.vertical-align {
+  background: white;
+  display: table-cell;
+  background: transparent;
+}
+
+.vertical-align--middle {
+  vertical-align: middle;
+  background: transparent;
+}
