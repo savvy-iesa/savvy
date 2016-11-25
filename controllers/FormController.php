@@ -12,15 +12,29 @@ require(dirname(__DIR__)."/classes/IAClass.php");
 
 $action = (isset($_GET['action']) ? $_GET['action']:'');
 
+// formulaire datas
 if($action == "save"){
+
     $dataspost = $_POST;
     echo "test pour l'enregistrement";
+
+// newsletter datas
+} elseif($action == "save-newsletter") {
+
+    $dataspost = $_POST;
+    echo "test pour l'enregistrement de la newsletter";
+
 } else {
     header("Location: ../index.html");
 }
 
 function controlForm($resultsForm){
-  return true;
+  $errors = array();
+  if(!empty($errors)){
+      return $errors;
+  } else {
+      return true;
+  }
 }
 
 function ia_Process($resultsForm){
