@@ -49,6 +49,7 @@
                 </g>
                 </svg>
                 <div class="henry-shadow"></div>
+                <div class="bulle-henry-container"><div></div></div>
             </div>
 
             <div id="info">

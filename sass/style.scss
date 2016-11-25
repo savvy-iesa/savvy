@@ -83,6 +83,38 @@ body,html{
   height:175px;
   position: relative;
   margin-bottom: 50px;
+  .bulle-henry-container{
+   position: absolute;
+   left:50%;
+   height:160px;
+   width:160px;
+   margin-left: -80px;
+   top: 10px;
+   -webkit-animation:animhenrybulle 0.6s alternate infinite ease-in-out;
+   -moz-animation:animhenrybulle 0.6s alternate infinite ease-in-out;
+   -ms-animation:animhenrybulle 0.6s alternate infinite ease-in-out;
+   -o-animation:animhenrybulle 0.6s alternate infinite ease-in-out;
+   animation:animhenrybulle 0.6s alternate infinite ease-in-out;
+
+  }
+  @-webkit-keyframes animhenrybulle{
+   from {top:0px;}
+   to {top:6px;}
+  }
+  @-moz-keyframes animhenrybulle{
+   from {top:0px;}
+   to {top:6px;}
+  }
+  @-o-keyframes animhenrybulle{
+   from {top:0px;}
+   to {top:6px;}
+  }
+  @keyframes animhenrybulle{
+   from {top:0px;}
+   to {top:6px;}
+  }
+
+
   .henry-shadow{
    position: absolute;
    bottom:0;
