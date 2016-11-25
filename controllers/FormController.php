@@ -7,6 +7,7 @@
  */
 
 require(dirname(__DIR__)."/classes/IAClass.php");
+require(dirname(__DIR__)."/classes/Form.php");
 
 session_start();
 
@@ -24,26 +25,28 @@ if(empty($action)){
 // If POST is defined and not empty
 $datasposts = (isset($_POST) ? $_POST:'');
 
+$errors = [];
+
 // si une action est demandée
 
 if (isset($_GET['action'])){
     // demande de verification ajax
     if ($_GET['action'] == "check") {
         if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
-            $states = array('errors' => checkFields($_POST, $_FILES));
+            $states = array('errors' => checkFields($datasposts));
             header('Content-type: application/json');
             echo(json_encode($states, JSON_FORCE_OBJECT));
         }
     } else if($_GET['action'] == "save-newsletter"){
-        $errors = checkFields($_POST, $_FILES);
 
-        if (count($errors) == 0) {
+            $form = new Form();
+            $ip = $form->ipNewsletter();
+            $email = $datasposts['email'];
+            $form->addNewsletter($email, $ip);
 
-        } else {
-            $_SESSION['errors'] = $errors;
-            $_SESSION['postdata'] = $_POST;
-        }
-
+            $errors['email'] = "J'ai bien enregistré votre email";
+            header('Content-type: application/json');
+            echo(json_encode(array('errors' => $errors), JSON_FORCE_OBJECT));
     }
 }
 
@@ -51,7 +54,6 @@ function checkFields($postdata)
 {
 
     $warnings = [];
-    $errors = [];
     if (isset($postdata['name'])) {
         // si vide
         if (empty($postdata['name'])) {
