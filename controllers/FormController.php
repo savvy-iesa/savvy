@@ -67,10 +67,10 @@ function checkFields($postdata)
     if (isset($postdata['email'])) {
         // si vide
         if (empty($postdata['email'])) {
-            $errors['email'] = 'champ email vide';
+            $errors['email'] = 'Veuillez renseigner votre email';
             // si longueur > 150 chars
         } else if (mb_strlen($postdata['email']) > 150) {
-            $errors['email'] = 'champ email trop long (150max)';
+            $errors['email'] = 'Votre email est trop long !';
             // si format mail invalide
         } else if (!filter_var($postdata['email'], FILTER_VALIDATE_EMAIL)) {
             $errors['email'] = 'J\'ai besoin d\'un email valide';
@@ -81,7 +81,7 @@ function checkFields($postdata)
     }
 
     if (isset($postdata['message']) && empty(trim($postdata['message']))) {
-        $errors['message'] = 'champ message vide';
+        $errors['message'] = 'Veuillez renseigner votre email';
     }
 
     return $errors;
