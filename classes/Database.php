@@ -21,7 +21,7 @@ class Database
                     array(PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
             }
             catch (PDOException $e) {
-                errorHandler(0, $e->getMessage(), $e->getFile(), $e->getLine(), print_r($e, true), 'sql');
+                echo $e->getMessage();
                 die('SQL Error, terminating script.');
             }
         }

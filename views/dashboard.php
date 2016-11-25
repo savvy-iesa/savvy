@@ -13,7 +13,7 @@ include(__DIR__."/header.php");
 
 <!-- Formulaire lightbox -->
 <div class="hidden form">
-    <?php include("form.php") ?>
+    <?php include("form.php") ; ?>
 </div>
 
 <div class="dashboard">
