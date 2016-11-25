@@ -36,9 +36,27 @@
             <h1>L'application qui</br> révolutionne l'éducation.</h1>
             <p class="henry-talking">Initialisation d' Henry</br> en cours...</p>
 
-            <div id="info">Soyez informé de mon arrivé
+            <div id="henry">
+                <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 291.3 328" style="enable-background:new 0 0 291.3 328;" xml:space="preserve" width="100" height="auto">
+                <style type="text/css">
+                    .st2{fill:none;stroke:#FFFFFF ;stroke-width:18;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:0.9996,0;}
+                </style>
+                <g id="XMLID_111_">
+                    <path id="XMLID_230_" class="st2" d="M18.6,80.7L137.5,12c5.2-3,11.6-3,16.8,0l118.9,68.7c5.2,3,8.4,8.6,8.4,14.6l0,137.3
+                        c0,6-3.2,11.6-8.4,14.6l-118.9,68.7c-5.2,3-11.6,3-16.8,0L18.6,247.1c-5.2-3-8.4-8.6-8.4-14.6l0-137.3
+                        C10.2,89.2,13.4,83.7,18.6,80.7z"/>
+                </g>
+                </svg>
+            </div>
+
+            <div id="info">
+            <div>Soyez informé de mon arrivé</div>
                 <span></span>
             </div>
+            <div class="newsletter-form">
+               <?php include("newsletter.php"); ?>
+           </div>
 
         </div>
     </div>

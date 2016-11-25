@@ -26,7 +26,7 @@ body,html{
  background: linear-gradient(45deg, rgba(255,47,120,1) 0%, rgba(227,47,209,1) 100%);
  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2f78', endColorstr='#e32fd1', GradientType=1 );
  #logo{
-  width:400px;
+  width:250px;
   height:auto;
   &:after{
    display: block;
@@ -40,8 +40,9 @@ body,html{
  }
  h1{
   color: $sp-white;
-  font-size: 35px;
+  font-size: 30px;
   font-family: "projectReg";
+  margin-top: 25px;
  }
  #form1{
   position:absolute;
@@ -56,10 +57,11 @@ body,html{
  }
  .henry-talking{
   font-family: "Courier New";
-  font-size:25px;
+  font-size:22px;
   color: $sp-white;
-  font-weight:bold;
   margin-top: 30px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
  }
  .foreground{
   z-index:100;
@@ -67,11 +69,11 @@ body,html{
  #info{
   font-family: projectReg;
   box-sizing: border-box;
-  font-size: 25px;
+  font-size: 19px;
   color: $sp-white;
   text-align: center;
   width:350px;
-  padding: 25px 0;
+  height: 60px;
   background: $sp-pink;
   border-radius:5px;
   display: block;
@@ -80,8 +82,13 @@ body,html{
   -webkit-box-shadow: 3px 3px 8px 1px rgba(0,0,0,0.3);
   -moz-box-shadow: 3px 3px 8px 1px rgba(0,0,0,0.3);
   box-shadow: 3px 3px 8px 1px rgba(0,0,0,0.3);
-
   margin-top: 30px;
+  div{
+   position: absolute;
+   left:56px;
+   top:22px;
+   z-index:100;
+  }
 
   span{
    display: block;
@@ -119,6 +126,56 @@ body,html{
    }
   }
 
+ }
+ .newsletter-form{
+  width:350px;
+  font-size: 23px;
+  margin:auto;
+  margin-top: 20px;
+  .form-section{
+   width:350px;
+   background: $sp-bg-grey;
+   border-radius:5px ;
+   &>*{
+    display: inline-block;
+    vertical-align: middle;
+   }
+   label{
+    height:60px;
+    width:60px;
+    overflow: hidden;
+    font-size:0;
+    background: url("../assets/images");
+    position: relative;
+    &:after{
+     display: block;
+     content:'';
+     height: 90%;
+     width:2px;
+     background: #ead6dd;
+     position: absolute;
+     right: 0px;
+     top:3px;
+    }
+   }
+   input.email{
+    width:218px;
+    border:none;
+    outline-style: none;
+    background: transparent;
+    position: relative;
+   }
+   input[type="submit"]{
+    background: white;
+    height: 60px;
+    border:none;
+    border-radius: 5px;
+    width:60px;
+    overflow: hidden;
+    font-size: 0;
+    outline-style: none;
+   }
+  }
  }
 
 }

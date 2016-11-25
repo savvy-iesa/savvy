@@ -12,7 +12,7 @@ include(dirname(__DIR__)."/classes/Form.php");
 <form id="newsletter-form" method="post" action="/controllers/FormController.php?action=save-newsletter">
     <div class="form-section">
         <label for="email">Email:</label>
-        <input type="email" class="form-control" name="email" required="">
+        <input type="email" class="form-control email" name="email" required="">
         <input type="submit" name="newsletter" value="subscribe">
     </div>
 </form>

@@ -89,7 +89,7 @@ body, html {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2f78', endColorstr='#e32fd1', GradientType=1 );
 }
 #landingPage #logo {
-  width: 400px;
+  width: 250px;
   height: auto;
 }
 #landingPage #logo:after {
@@ -103,8 +103,9 @@ body, html {
 }
 #landingPage h1 {
   color: #fff;
-  font-size: 35px;
+  font-size: 30px;
   font-family: "projectReg";
+  margin-top: 25px;
 }
 #landingPage #form1 {
   position: absolute;
@@ -119,10 +120,11 @@ body, html {
 }
 #landingPage .henry-talking {
   font-family: "Courier New";
-  font-size: 25px;
+  font-size: 22px;
   color: #fff;
-  font-weight: bold;
   margin-top: 30px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
 }
 #landingPage .foreground {
   z-index: 100;
@@ -130,11 +132,11 @@ body, html {
 #landingPage #info {
   font-family: projectReg;
   box-sizing: border-box;
-  font-size: 25px;
+  font-size: 19px;
   color: #fff;
   text-align: center;
   width: 350px;
-  padding: 25px 0;
+  height: 60px;
   background: #ff2f78;
   border-radius: 5px;
   display: block;
@@ -144,6 +146,12 @@ body, html {
   -moz-box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.3);
   box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.3);
   margin-top: 30px;
+}
+#landingPage #info div {
+  position: absolute;
+  left: 56px;
+  top: 22px;
+  z-index: 100;
 }
 #landingPage #info span {
   display: block;
@@ -183,6 +191,56 @@ body, html {
   top: 0;
   width: 100%;
   height: 30px;
+}
+#landingPage .newsletter-form {
+  width: 350px;
+  font-size: 23px;
+  margin: auto;
+  margin-top: 20px;
+}
+#landingPage .newsletter-form .form-section {
+  width: 350px;
+  background: #e8e8e8;
+  border-radius: 5px;
+}
+#landingPage .newsletter-form .form-section > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+#landingPage .newsletter-form .form-section label {
+  height: 60px;
+  width: 60px;
+  overflow: hidden;
+  font-size: 0;
+  background: url("../assets/images");
+  position: relative;
+}
+#landingPage .newsletter-form .form-section label:after {
+  display: block;
+  content: '';
+  height: 90%;
+  width: 2px;
+  background: #ead6dd;
+  position: absolute;
+  right: 0px;
+  top: 3px;
+}
+#landingPage .newsletter-form .form-section input.email {
+  width: 218px;
+  border: none;
+  outline-style: none;
+  background: transparent;
+  position: relative;
+}
+#landingPage .newsletter-form .form-section input[type="submit"] {
+  background: white;
+  height: 60px;
+  border: none;
+  border-radius: 5px;
+  width: 60px;
+  overflow: hidden;
+  font-size: 0;
+  outline-style: none;
 }
 
 .vertical-align-wrap {
