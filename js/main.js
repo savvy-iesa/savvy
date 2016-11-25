@@ -44,8 +44,7 @@ $(function () {
 
 
         // errors display function
-        function showErrors(errors, inputName, showAsPopover) {
-           console.log(errors);
+        function showErrors(errors) {
             $('#info-bulle').html(''+errors.email+'');
         }
 
@@ -68,7 +67,7 @@ $(function () {
                 function (data) {
                     var inputName = $(that).attr('name');
                     var errors = data['errors'];
-                    showErrors(errors, inputName, 1);
+                    showErrors(errors);
                 }
             );
         });
@@ -83,7 +82,7 @@ $(function () {
                 function (data) {
                     var inputName = $(that).attr('name');
                     var errors = data['errors'];
-                    showErrors(errors, inputName, 0);
+                    showErrors(errors);
                 }
             );
         });
@@ -92,10 +91,13 @@ $(function () {
             e.preventDefault() && e.stopPropagation();
             var that = this;
             $.post(
-                '/controllers/FormController.php?action=save',
+                '/controllers/FormController.php?action=save-newsletter',
                 $(that).serialize(),
                 function (data) {
-                    $(that).append('<span>Enregistré avec succés à la newsletter</span>');
+                    var errors = data['errors'];
+                    showErrors(errors);
+
+                    $('.form-section').hide();
                 }
             );
         });
@@ -106,7 +108,7 @@ $(function () {
             var inputName = $(that).attr('name');
             var errors = phpErrors;
             if(errors[inputName]) {
-                showErrors(errors, inputName, 0);
+                showErrors(errors);
             }
         });
 

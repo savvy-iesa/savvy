@@ -10,9 +10,9 @@
 
 // Local
 define("DBHOST", "localhost");
-define("DBNAME", "savvy");
+define("DBNAME", "savvyiesa_staging_sp");
 define("DBUSER", "root");
-define("DBPASSWD", "");
+define("DBPASSWD", "root");
 
 // Server
 
