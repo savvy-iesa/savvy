@@ -156,13 +156,13 @@ body, html {
   height: 160px;
   width: 160px;
   margin-left: -80px;
-  top: 10px;
+  top: 0px;
   -webkit-animation: animhenrybulle 0.6s alternate infinite ease-in-out;
   -moz-animation: animhenrybulle 0.6s alternate infinite ease-in-out;
   -ms-animation: animhenrybulle 0.6s alternate infinite ease-in-out;
   -o-animation: animhenrybulle 0.6s alternate infinite ease-in-out;
   animation: animhenrybulle 0.6s alternate infinite ease-in-out;
-  animation: rotate 3s infinite linear;
+  animation: rotate 3s infinite ease-in-out;
 }
 #landingPage #henry .bulle-henry-container div {
   background: transparent;
