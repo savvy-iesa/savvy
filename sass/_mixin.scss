@@ -5,6 +5,14 @@
   border-radius: $radius;
 }
 
+@mixin rotate-transform($angle){
+  -webkit-transform: rotate($angle);
+  -moz-transform: rotate($angle);
+  -ms-transform: rotate($angle);
+  -o-transform: rotate($angle);
+  transform: rotate($angle);
+}
+
 @mixin sp-flex-box($direction,$horizontal-alignement,$vertical-alignement){
   display: flex;
   flex-direction: $direction;
