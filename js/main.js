@@ -57,6 +57,7 @@ $(function () {
                         dataType : 'html',
 
                     success : function(code_html, statut){
+                        console.log(code_html);
                         $('.response-form').html(code_html);
                     },
 
