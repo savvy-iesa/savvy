@@ -1,5 +1,8 @@
 #Options +FollowSymlinks
 #RewriteEngine on
 
+# Ajouter la redirection https
+
 # Règles de réécriture
 #RewriteRule ^(.*)\.html$ /views/$1.php [nc]
+

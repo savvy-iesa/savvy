@@ -6,9 +6,9 @@
  * Time: 20:44
  */
 
-include(dirname(__DIR__)."/classes/Form.php");
-
 // Include this file in dashboard.php
+
+include(dirname(__DIR__)."/classes/Form.php");
 
 $form = new Form;
 $listCategories = $form->listCategories();
@@ -17,7 +17,9 @@ $listCategories = $form->listCategories();
 <div id="appform">
     <h1>Configurer votre enfant</h1>
 
-    <form class="demo-form" method="post" action="controllers/FormController.php">
+    <div class="response-form"></div>
+
+    <form class="demo-form" method="post" action="/controllers/FormController.php?action=save">
 
     <?php foreach($listCategories as $listCategory){
         $id_cat = $listCategory['id'];

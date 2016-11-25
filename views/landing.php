@@ -7,5 +7,11 @@
  */
 ?>
 
+    <div>
+        <p>Home</p>
+        <div class="newsletter-form">
+            <?php include("newsletter.php"); ?>
+        </div>
+    </div>
 
 
