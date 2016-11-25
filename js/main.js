@@ -41,7 +41,7 @@ $(function () {
 
         // Ajax formulaire submit
 
-        $("#appform .demo-form").submit(function(e){
+        $("#appform .demo-form, #newsletter-form").submit(function(e){
 
             e.preventDefault();
 

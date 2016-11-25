@@ -12,6 +12,9 @@ include(__DIR__."/header.php");
 
     <div>
         <p>Home</p>
+        <div class="newsletter-form">
+            <?php include("newsletter.php"); ?>
+        </div>
     </div>
 
 
