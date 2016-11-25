@@ -2,4 +2,4 @@ Options +FollowSymlinks
 RewriteEngine on
 
 # Règles de réécriture
-RewriteRule ^(.*)\.html$ /views/$1.php [nc]
+#RewriteRule ^(.*)\.html$ /views/$1.php [nc]
