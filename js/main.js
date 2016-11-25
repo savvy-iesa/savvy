@@ -39,38 +39,100 @@ $(function () {
         });
         navigateTo(0); // Start at the beginning
 
-        // Ajax formulaire submit
+        // Ajax formulaire
 
-        $("#appform .demo-form, #newsletter-form").submit(function(e){
 
-            e.preventDefault();
 
-            $actionForm = $(this).attr('action');
-            var donnees = $(this).serialize();
+        // errors display function
+        function showErrors(errors, inputName, showAsPopover) {
+            var targetElt = $('#' + inputName);
+            targetElt.closest('.form-section').find('.feedback').remove();
+            if (!!errors[inputName]) {
+                targetElt.closest('.form-section')
+                    .removeClass('has-success')
+                    .addClass('has-error');
 
-            if(donnees.length > 0)
+                if (showAsPopover) {
+                    if (targetElt.data('bs.popover')) {
+                        targetElt.data('bs.popover').options.content = errors[inputName]
 
-                $.ajax({
-                    url : $actionForm,
-                        type : 'POST',
-                        data: donnees,
-                        dataType : 'html',
-
-                    success : function(code_html, statut){
-                        console.log(code_html);
-                        $('.response-form').html(code_html);
-                    },
-
-                    error : function(resultat, statut, erreur){
-                        console.log(statut);
-                    },
-
-                    complete : function(resultat, statut){
-
+                    } else {
+                        targetElt.popover({
+                            content: errors[inputName]
+                        })
                     }
+                    targetElt.popover('show');
+                } else {
+                    targetElt
+                        .after($('<p class="text-danger">' + errors[inputName] + '</p>'));
+                }
+            } else {
+                targetElt.closest('.form-section')
+                    .removeClass('has-error')
+                    .addClass('has-success');
 
-                });
+            }
+        }
 
+        $('#newsletter-form input, #newsletter-form textarea').on('focus', function (e) {
+            e.preventDefault() && e.stopPropagation();
+            var that = this;
+            var targetElt = $(that);
+            targetElt.closest('.form-section')
+                .removeClass('has-error')
+                .find('.feedback')
+                .remove();
+        });
+
+        $('#newsletter-form input, #newsletter-form textarea').on('keyup', function (e) {
+            e.preventDefault() && e.stopPropagation();
+            var that = this;
+            $.post(
+                '/controllers/FormController.php?action=check',
+                $(that).serialize(),
+                function (data) {
+                    var inputName = $(that).attr('name');
+                    var errors = data['errors'];
+                    showErrors(errors, inputName, 1);
+                }
+            );
+        });
+
+
+        $('#newsletter-form input, #newsletter-form textarea').on('blur', function (e) {
+            e.preventDefault() && e.stopPropagation();
+            var that = this;
+            $.post(
+                '/controllers/FormController.php?action=check',
+                $(that).serialize(),
+                function (data) {
+                    var inputName = $(that).attr('name');
+                    var errors = data['errors'];
+                    showErrors(errors, inputName, 0);
+                }
+            );
+        });
+
+        $('#newsletter-form').on('submit', function (e) {
+            e.preventDefault() && e.stopPropagation();
+            var that = this;
+            $.post(
+                '/controllers/FormController.php?action=save',
+                $(that).serialize(),
+                function (data) {
+                    $(that).append('<span>Enregistré avec succés à la newsletter</span>');
+                }
+            );
+        });
+
+        // display errors if errors retrieved from PHP form submit
+        $('#newsletter-form input, #newsletter-form textarea').each(function () {
+            var that = this;
+            var inputName = $(that).attr('name');
+            var errors = phpErrors;
+            if(errors[inputName]) {
+                showErrors(errors, inputName, 0);
+            }
         });
 
 
